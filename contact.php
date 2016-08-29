@@ -13,9 +13,9 @@
 
       <div id="overlayContact" class="text-vcenter">
 
-        <h3>info@<span class="largeText">chalice.tech</span></h3>
+        <h3><span class="largeText">chalice.tech</span></h3>
 <!--           <div class="container-fluid"> -->
-            <div id="emailForm" class="container-fluid">
+<!--             <div id="emailForm" class="container-fluid">
               <form class="form-horizontal" role="form" method="post" action="contactForm.php">
                 <div class="form-group">
                   <div class="col-sm-12">
@@ -33,14 +33,14 @@
                   <div class="col-sm-12">
                   <label for="message" class="control-label">Message</label>
                     <textarea class="form-control" id="message" rows="4" name="message"></textarea>
-<!--                   </div> -->
-                </div>
+                  </div> -->
+               <!--  </div> -->
               <!--   <div class="form-group">
                   <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
                   </div> -->
-                </div>
+<!--                 </div>
                 <div class="form-group">
                   <div class="col-sm-12">
                     <input id="submit" name="submit" type="submit" value="Send Email" class="btn btn-primary">
@@ -53,13 +53,17 @@
                   <div class="col-sm-1"></div>
                 </div>
               </form>
-              </div>
+              </div> 
 
-            <div id="contact-li">
-              <a href="https://www.linkedin.com/in/chalice-stevens-000239112" target="_blank"><span class="hb hb-md"><i class="fa fa-lin-square"></i></span></a> 
-            </div>
+          </div>-->
+      <div class="about-spacer">
+      </div>
+            <div id="TrickAdblock">
+              <a href="https://www.facebook.com/chalice.tech/" target="_blank"><span class="hb hb-md"><i class="fa fa-fbook"></i></span></a>
+              <a href="https://twitter.com/ChaliceAriel" target="_blank"><span class="hb hb-md"><i class="fa fa-witter"></i></span></a>
+              <a href="https://www.linkedin.com/in/chalice-stevens-000239112" target="_blank"><span class="hb hb-md"><i class="fa fa-lin-square"></i></span></a>
+            </div> 
 
-          </div>
 
         </div>    
       </div>

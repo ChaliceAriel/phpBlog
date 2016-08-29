@@ -13,7 +13,7 @@
               <div class="about-spacer">
       </div>
             <div id="TrickAdblock">
-              <a href="https://www.facebook.com/chalice.ariel/" target="_blank"><span class="hb hb-md"><i class="fa fa-fbook"></i></span></a>
+              <a href="https://www.facebook.com/chalice.tech/" target="_blank"><span class="hb hb-md"><i class="fa fa-fbook"></i></span></a>
               <a href="https://twitter.com/ChaliceAriel" target="_blank"><span class="hb hb-md"><i class="fa fa-witter"></i></span></a>
               <a href="https://www.linkedin.com/in/chalice-stevens-000239112" target="_blank"><span class="hb hb-md"><i class="fa fa-lin-square"></i></span></a>
             </div> 

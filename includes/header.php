@@ -11,13 +11,13 @@
     <meta charset="utf-8" />
     <meta name="ChaliceAriel" content="ChaliceStevensHomepage" />
     <title><?= $page_title?></title>
-    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- *** CSS styles *** -->
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/blog.css" rel="stylesheet" type="text/css"/>
+    <link href="css/blog5.css" rel="stylesheet" type="text/css"/>
 
 
     <link rel="stylesheet" type="text/css" href="hexButtons/css/font-awesome.css">

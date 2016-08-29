@@ -25,13 +25,13 @@
     <meta charset="utf-8" />
     <meta name="ChaliceAriel" content="ChaliceStevensHomepage" />
     <title><?= $page_title?></title>
-    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- *** CSS styles *** -->
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/blog.css" rel="stylesheet" type="text/css"/>
+    <link href="css/blog5.css" rel="stylesheet" type="text/css"/>
 
 
     <link rel="stylesheet" type="text/css" href="hexButtons/css/font-awesome.css">
@@ -44,7 +44,35 @@
 
   <body>
 
-<?php include("includes/nav.php"); ?>
+  <!-- *** Nav Panel *** -->
+    <nav class="navbar navbar-inverse">
+    <a href="index.php"><img id="logo" src="images/myLogo.png"/></a>
+        <div class="navbar-nav navbar-right">  
+          <ul>
+            <a href="https://www.facebook.com/chalice.tech/" target="_blank"><span class="hb hb-sm"><i class="fa fa-fbook"></i></span></a>
+            <a href="https://twitter.com/ChaliceAriel" target="_blank"><span class="hb hb-sm"><i class="fa fa-witter"></i></span></a>
+            <a href="https://github.com/ChaliceAriel" target="_blank"><span class="hb hb-sm"><i class="fa fa-github-square"></i></span></a>
+            <a href="https://www.linkedin.com/in/chalice-stevens-000239112" target="_blank"><span class="hb hb-sm"><i class="fa fa-lin-square"></i></span></a>
+          </div>
+          </ul>
+        </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      <div id="navbar" class="container-fluid text-center">
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="nav navbar-nav">
+          <li class="<?= ($activePage == 'index' || $activePage == 'single' || $activePage == 'results') ? 'active':''; ?>"><a href="index.php">Home</a></li>
+          <li class="<?= ($activePage == 'projects') ? 'active':''; ?>"><a href="projects.php">Projects</a></li>
+          <li class="<?= ($activePage == 'about') ? 'active':''; ?>"><a href="about.php">About</a></li>
+          <li class="<?= ($activePage == 'contact') ? 'active':''; ?>"><a href="contact.php">Contact</a></li>
+          </ul>
+      </div>
+    </nav>
 
       <div class="jumbotron text-center">
         <h1 id="blog-title">Adventures in Code</h1>

@@ -4,10 +4,10 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
   <!-- *** Nav Panel *** -->
     <nav class="navbar navbar-inverse">
-    <a href="#"><img id="logo" src="images/logo2.png"/></a>
+    <a href="index.php"><img id="logo" src="images/myLogo.png"/></a>
         <div class="navbar-nav navbar-right">  
           <ul>
-            <a href="https://www.facebook.com/chalice.ariel/" target="_blank"><span class="hb hb-xs"><i class="fa fa-fbook"></i></span></a>
+            <a href="https://www.facebook.com/chalice.tech/" target="_blank"><span class="hb hb-xs"><i class="fa fa-fbook"></i></span></a>
             <a href="https://twitter.com/ChaliceAriel" target="_blank"><span class="hb hb-xs"><i class="fa fa-witter"></i></span></a>
             <a href="https://github.com/ChaliceAriel" target="_blank"><span class="hb hb-xs"><i class="fa fa-github-square"></i></span></a>
             <a href="https://www.linkedin.com/in/chalice-stevens-000239112" target="_blank"><span class="hb hb-xs"><i class="fa fa-lin-square"></i></span></a>

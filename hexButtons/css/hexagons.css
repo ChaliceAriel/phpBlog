@@ -305,9 +305,9 @@ inv 		= Inverse Behaver of buttons
 .hb,
 .hb:before,
 .hb:after {
-	background-color: #a300ff;  /*  Default background color  #a300ff*/ 
-	border-left:1px solid #a300ff;
-	border-right:1px solid #a300ff;
+	background-color: #6389AA;  /*  Default background color  #6389AA*/ 
+	border-left:1px solid #6389AA;
+	border-right:1px solid #6389AA;
 	color: #fff; /* Default font color */
 }
 /* 5.1 - Default Colors End
@@ -327,5 +327,26 @@ inv 		= Inverse Behaver of buttons
 /* 5.2 - Default hover colors end
 -------------------------------------------------*/
 
+.hbl,
+.hbl:before,
+.hbl:after {
+	background-color: #ffb84d;  /*  Default background color  #ffb84d*/ 
+	border-left:1px solid #ffb84d;
+	border-right:1px solid #ffb84d;
+	color: #fff; /* Default font color */
+}
+/* 5.1 - Default Colors End
+-------------------------------------------------*/
 
+
+/* 5.2 - Default hover colors
+-------------------------------------------------*/
+.hbl:hover,
+.hbl:hover:before,
+.hbl:hover:after {
+	background: transparent;  
+	border-left:1px solid #9be73a;
+	border-right:1px solid #9be73a;  
+	color: #fff; /* Default hover font color */
+}
 

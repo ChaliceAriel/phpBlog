@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Meet my New Friend Laravel: <br>The Modern, Feature-rich Framework for PHP</h1>
+<a href="https://laravel.com/" target="_blank"><img class="img-responsive" src="https://qph.ec.quoracdn.net/main-qimg-3965add7c3c3703ad6b41254a8664767?convert_to_webp=true"/></a>
+
+<p>When my boyfriend recently asked me what I planned to do this weekend, I told him, "Play with Laravel." My boyfriend is a very experienced PHP developer, but he jokingly asked, "Who is Laravel?" I smiled and responded playfully, "My beautiful new friend"!</p>
+<p>What makes Laravel beautiful? Laravel simplifies the process of building complex applications. It has become one of the most popular modern PHP frameworks, if not <em>the</em> most popular. It has built-in support for user authentication and authorization, making it easy to write secure applications that are scalable. Laravel bundles allow you to <a href="http://packalyst.com/" target="_blank">quickly add features</a> to your application, much like npm packages for NodeJS. Laravel's 'Query builder' allows you to programmatically create SQL queries using built-in classes and methods. Tools like <a href="https://forge.laravel.com/" target="_blank">Laravel Forge</a> make application deployment simple, allowing you to focus on writing code. Finally, Laravel is well-maintained, with a large, friendly, and dedicated community supporting it. Laravel even has its own annual developer conference, <a href="http://laracon.us/" target="_blank">Laracon</a>, and a fantastic training site: <a href="https://laracasts.com/" target="_blank">laracasts.com</a>.</p>
+
+
+
+
+
+<h2>Setting up Your Laravel Development Environment in the Cloud</h2>
+<img src="https://raw.githubusercontent.com/codeATbusiness/c9-laravel/master/img/c9-1.png" alt="Cloud 9 Homepage"/>
+<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Cloud9IDE.png" alt="Cloud 9 Logo" style="width: 200px; height: 180px;"/>  -->
+<p>One way to quickly get up and running with Laravel is to set up a <a href ="http://www.hongkiat.com/blog/cloud-ide-developers/" target="_blank">cloud-based development environment</a> using a service like Cloud 9, Codeanywhere, or Koding. <a href="https://codeanywhere.com/" target="_blank">Codeanywhere</a> offers Laravel preconfigured development right out of the box. Here is a post that walks you through <a href="http://blog.simonklit.com/posts/installing-laravel-on-kodingcom" target="_blank">installing Laravel on <a href="http://www.koding.com/" target="_blank">Koding.com</a> through your terminal, and I will go over setting up Laravel with <a href="https://c9.io/" target="_blank">Cloud 9</a> in the steps below.</p> 
+<ul>
+		<li>1. <a href="https://c9.io/" target="_blank">Sign-up</a> for the Free-tier development environment using your email address. After selecting a username and answering some questions, Cloud 9 will ask for your credit card information. They <u>will not</u> charge you as long as you remain on their free plan.</li>
+		<li>2. Follow the link in the email sent by Cloud 9, and set the password for your account. </li>
+		<li>3. Click on 'Create New Workspace' in the center of the gray box on your Cloud 9 Dashboard. Type in the name of your project in the 'Workspace name' field, and add some details about your project in the 'Description' field. Here is a <a href="https://docs.c9.io/docs/create-a-workspace" target="_blank">video on creating a workspace.</a></li>
+		<li>4. Make sure you <strong>select the PHP template</strong> at the bottom of this page, then click on the green 'Create workspace' button.</li><br>
+		<li>5.<strong> Now it's time to install Laravel!</strong> At the bottom of your new workspace is a tab with a bash terminal. If you don't see it, open a new bash shell by clicking on 'window' in the menu, and selecting 'new terminal' from the dropdown.</li>
+		 <li>6. Follow <a href="https://community.c9.io/t/getting-started-with-laravel/1608" target="_blank">this installation guide</a> step-by step, copying the code and pasting it into the terminal. I've also included these instructions below:</li>
+		 <blockquote>
+		<code class="well">rm README.md php.ini hello-world.php<br>
+sudo composer self-update<br>
+composer createproject laravel/laravel ./laravel --prefer-dist<br>
+shopt -s dotglob<br>
+mv laravel/* ./<br>
+rm -rf laravel</code>
+		<li>7. Copy and paste this code into the workspace terminal. It takes a couple minutes for Laravel to finish downloading. When it's complete, you should see these three lines at the bottom of your terminal:
+		<img src=""/>
+		If you don't see these three lines, Laravel was not successfully installed. Copy the last few lines from the code block above (starting with "shopt..") and paste them into the terminal again.</li>
+		<li>8. Once you see those three lines, hit Enter on your keyboard and your project file structure will appear in the left column of your workspace.</li>
+		<li>9. Cloud 9 serves it's files from the root workspace directory, but Laravel serves it's files from the "public" directory, so we need to change a couple more things.</li>
+		<li>10. Access the apache web server configuration file with the nano text editor by pasting this code into your terminal: <code class="well">sudo nano /etc/apache2/sites-enabled/001-cloud9.conf</code> and pressing 'Enter'. Then edit this file by setting the default directory to the public folder.<div class="well">Change this line at the top:<br><code>DocumentRoot /home/ubuntu/workspace</code><br>To this:<br><code>DocumentRoot /home/ubuntu/workspace/public</code></div>To save the file and exit the nano text editor press F2, then 'Y' and 'Enter'.</li>
+		<li>11. Now you can get the latest version of Laravel by running this command: <code>sudo composer update</code></li>
+		</blockquote>
+		<li>12. That's it! Laravel should be up and running now! Click the green 'Run Project' button at the top of your workspace. In the terminal you should see "Starting Apache httpd, serving", followed by a blue web link. Click to open this link and you should see the 'Laravel 5' white splash page.</li>
+
+</ul>
+<p>To set up your database in Cloud 9 and get it working with Laravel, you can follow the last few step in this <a href="https://community.c9.io/t/getting-started-with-laravel/1608" target="_blank">guide</a>.</p>
+
+
+<h2>Installing Laravel Locally with Your Web Server Stack</h2>
+<p><img src="https://d16zszyyqlzz6z.cloudfront.net/images/xampp-logo-ac950edf.svg" alt="Xampp Logo" style="width: 60px; height: 60px;"/>This post is not intended as a comprehensive local <a href="https://laravel.com/docs/5.3" target="_blank">install guide for Laravel</a>. Installation instuctions will vary depending upon your server stack (i.e. Xampp) and your OS (operating system). Just like in the cloud-based environment above, it is important to set the root folder to the 'public' directory. I started by <a href="https://getcomposer.org/download/" target="_blank">installing Composer</a>, a popular PHP package and dependency manger required by Laravel's installer, through the Windows command terminal. Because I am already using Xampp for Windows on my desktop, I then followed <a href="https://www.codementor.io/php/tutorial/how-to-install-laravel-5-xampp-windows" target="_blank">this excellent tutorial</a> from <a href="https://www.codementor.io/" target="_blank">codementor.io</a>, and it worked like a charm! Well, actually there was one minor hiccup which this tutorial makes note of when it warns: <blockquote>"...we have to configure our hosts file that allows us to redirect laravel.dev to the localhost that is located in C:\Windows\System32\drivers\etc<br>
+
+<strong>IMPORTANT!: To edit this file, maybe we should give access, click properties and allow your user to modify this file.</strong>"</blockquote> </p>
+<p>Basically, if you try to change the hosts file (to add a localhost for our new Laravel virtual host), Windows says that you "don't have permission" to save to that location. There are several solutions to this problem:
+<ul>
+	<li>1. Right click and run notepad as administrator, then open the file. More on that <a href="http://www.eightforums.com/general-support/53045-administrator-doesnt-have-permission-save-files.html" target="_blank">here.</a>
+   </li>
+   <li>2. Right click on the file, go to the very bottom of the drop-down and select "properties". Click on the "security" tab and then click the "Edit..." button. In the new modal that pops up, select/highlight your user in the upper window, and then select the checkbox next to "modify" in the lower window. Click "ok" button to save and close the dialog box.</li>
+   <li>3. Copy(Ctrl+C) the hosts file to the Desktop, edit and save it there, and then paste (Ctrl+V) it back into it's home folder, overriding the original file. <a href="" target="_blank">This video tutorial</a> shows you how. <em><small>(Nice try with the security Windows! You've succeeded in making this process a pain, while leaving it easy enough for someone without administrator privileges to change the hosts file.)</small></em> 
+   </li>
+</ul>
+</p>
+<p>After completing the codementor.io tutorial, I now have a virtual host in Xampp for building my Laravel project. But, there is more way I could have installed Laravel...</p>
+<h2>Laravel Homestead</h2>
+<p>What is Laravel Homestead? Well, it's a cross-platform PHP development environment that uses <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> with <a href="https://www.virtualbox.org/" target="_blank">Virtual Box</a>. I'll let the folks over at laravel.com explain it:
+<blockquote>"Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, and any other server software on your local machine. No more worrying about messing up your operating system! Vagrant boxes are completely disposable. If something goes wrong, you can destroy and re-create the box in minutes!"</blockquote>
+<strong>Wow, they sure sound exited about this! Now I'm excited too!!!</strong> Here is video tutorial for <a href="https://www.youtube.com/watch?v=S3kaQDFJiis" target="_blank">setting up Laravel Homestead on Windows 10</a>, and here is an excellent series of videos for mac called the <a href="https://www.youtube.com/watch?v=tbPGuikTzKk" target="_blank">Laravel Homestead Guide.</a></p>
+<p>I can't wait to start building my first app in Laravel, so I'm going to hold off on setting up Homestead just yet. I have Laravel installed and running on Xampp locally, and on my Cloud 9 workspace. If anyone I know is using Homestead, I'd love to hear more about it!</p><br>
+<p>A special thank you to my friend Joe for telling me about Laravel.</p>
+<h3>Coming Soon: A Tutorial On Building Your First Laravel App!</h3>
+
+</body>
+</html>

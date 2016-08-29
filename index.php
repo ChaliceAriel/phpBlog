@@ -59,7 +59,8 @@ include("includes/blog_header.php");
                 <!-- Post Body -->
                 <?= $row['truncated']; ?>
                <br> 
-            <a href="single.php?post=<?= $row['id']; ?>"><button class="btn btn-primary center-text">Read Full Article</button></a>
+            <a href="single.php?post=<?= $row['id']; ?>"><button class="btn btn-primary center-text btn-article">Full Article</button></a>
+            <hr class="blue-line">
           </div>
                   <?php } } else {
           echo "<div class='alert alert-warning'><p>Sorry! No matching posts were found.</p></div>";
